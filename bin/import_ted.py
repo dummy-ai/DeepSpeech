@@ -24,11 +24,14 @@ def _download_and_preprocess_data(data_dir):
     # Conditionally download data
     TED_DATA = "TEDLIUM_release2.tar.gz"
     TED_DATA_URL = "http://www.openslr.org/resources/19/TEDLIUM_release2.tar.gz"
+    print('downloading')
     local_file = base.maybe_download(TED_DATA, data_dir, TED_DATA_URL)
 
     # Conditionally extract TED data
     TED_DIR = "TEDLIUM_release2"
+    print('extracting')
     _maybe_extract(data_dir, TED_DIR, local_file)
+    print('done')
 
     # Conditionally convert TED sph data to wav
     _maybe_convert_wav(data_dir, TED_DIR)

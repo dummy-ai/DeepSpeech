@@ -1,0 +1,10 @@
+pid: 06678
+project: deep-speech
+user: strin
+volumes:
+  data/LDC93S1:
+    did: strin/LDC93S1:latest
+    where:
+      bucket: dummy-default
+      cloud: aws
+      key: strin/LDC93S1:latest/
