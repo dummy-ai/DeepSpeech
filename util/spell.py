@@ -20,7 +20,7 @@ def words(text):
     return re.findall(r'\w+', text.lower())
 
 # Load known word set
-with open('./data/spell/words.txt') as f:
+with open('./data/spell/words.txt', 'r', encoding='utf-8') as f:
     WORDS = set(words(f.read()))
 
 def log_probability(sentence):
